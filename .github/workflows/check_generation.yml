@@ -1,17 +1,10 @@
 name: Check code-generation
 
 on:
-  pull_request:
-    paths-ignore:
-      - "**.md"
-  push:
-    branches:
-      - master
-      - dev
-
+  workflow_dispatch:
 jobs:
   check_generation:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - uses: actions/checkout@v3.1.0

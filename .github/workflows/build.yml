@@ -1,25 +1,10 @@
 name: Build
 
 on:
-  pull_request:
-    paths-ignore:
-      - "**.md"
-      - "**.mdx"
-  push:
-    branches:
-      - master
-      - dev
-    paths-ignore:
-      - "**.md"
-      - "**.mdx"
-
-  schedule:
-    # runs the CI everyday at 10AM
-    - cron: "0 10 * * *"
-
+  workflow_dispatch:
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     defaults:
       run:

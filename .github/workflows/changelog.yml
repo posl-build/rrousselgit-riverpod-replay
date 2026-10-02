@@ -1,16 +1,10 @@
 name: Check CHANGELOG.md
 
 on:
-  push:
-    branches:
-      - master
-      - dev
-  pull_request:
-  
-
+  workflow_dispatch:
 jobs:
   changelog:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - uses: actions/checkout@v3.1.0
